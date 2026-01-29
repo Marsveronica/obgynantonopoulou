@@ -445,8 +445,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  (function initCookies() {
-    const prefs = getCookiePrefs();
-    if (!prefs) buildCookieUI();
-  })();
-});
+ (function initCookies(){
+  const prefs = getCookiePrefs();
+
+  // ✅ ΠΑΝΤΑ χτίζουμε UI για να δουλεύει το footer "Ρυθμίσεις Cookies"
+  buildCookieUI();
+
+  // ✅ Αν υπάρχουν prefs, δεν θέλουμε να ξαναδείξουμε banner
+  if (prefs) {
+    const banner = document.querySelector(".cookie-banner");
+    if (banner) banner.remove();
+  }
+})();
+

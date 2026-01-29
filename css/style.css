@@ -354,7 +354,6 @@ body{
     rgba(183,166,199,0.25),
     rgba(183,166,199,0.10)
   );
-  pointer-events:none;
 }
 
 @media (max-width:860px){
@@ -1254,4 +1253,5 @@ html, body{
   position: relative;
   z-index: 10;
 }
+
 

@@ -1277,8 +1277,38 @@ html, body{
   border: none;
   padding: 0;
 }
+.footer-legal{
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.footer-legal a,
+.footer-legal button{
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: var(--lavender-deep);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-legal a:hover,
+.footer-legal a:focus,
+.footer-legal button:hover,
+.footer-legal button:focus{
+  text-decoration-thickness: 2px;
+}
+
 
 .header-inner{
   position: relative;
   z-index: 10;
 }
+

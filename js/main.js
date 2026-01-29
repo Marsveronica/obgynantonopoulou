@@ -17,41 +17,43 @@ if (hamburger && nav) {
   });
 }
 
-// ESPA modal (accessible)
+// ESPA modal (accessible, robust)
 const espaTrigger = document.querySelector(".espa-trigger");
 const espaModal = document.getElementById("espa-modal");
-const espaClose = espaModal ? espaModal.querySelector(".modal-close") : null;
 
-if (espaTrigger && espaModal) {
-  espaTrigger.addEventListener("click", () => {
-    espaModal.hidden = false;
-    espaModal.classList.add("is-open");
-    document.body.style.overflow = "hidden";
-    if (espaClose) espaClose.focus();
-  });
+function openEspaModal(){
+  if (!espaModal) return;
+  espaModal.hidden = false;
+  document.body.style.overflow = "hidden";
 
-  if (espaClose) {
-    espaClose.addEventListener("click", closeModal);
-  }
-
-  espaModal.addEventListener("click", (e) => {
-    if (e.target === espaModal) closeModal();
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && !espaModal.hidden) {
-      closeModal();
-    }
-  });
+  const closeBtn = espaModal.querySelector(".modal-close");
+  if (closeBtn) closeBtn.focus();
 }
 
-function closeModal(){
+function closeEspaModal(){
   if (!espaModal) return;
-  espaModal.classList.remove("is-open");
   espaModal.hidden = true;
   document.body.style.overflow = "";
   if (espaTrigger) espaTrigger.focus();
 }
+
+if (espaTrigger && espaModal) {
+  espaTrigger.addEventListener("click", openEspaModal);
+
+  const closeBtn = espaModal.querySelector(".modal-close");
+  if (closeBtn) closeBtn.addEventListener("click", closeEspaModal);
+
+  // click outside modal to close
+  espaModal.addEventListener("click", (e) => {
+    if (e.target === espaModal) closeEspaModal();
+  });
+
+  // ESC to close
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !espaModal.hidden) closeEspaModal();
+  });
+}
+
 
 /* ===== Gallery groups for Clinic popup slideshow ===== */
 const GALLERIES = {
@@ -430,3 +432,4 @@ function buildCookieUI(){
     // If you add analytics later, tell me and I'll wire it cleanly.
   }
 })();
+

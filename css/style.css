@@ -259,19 +259,19 @@ body{
 
 /* ===============================
    ESPA MODAL
+   ✅ FIX: δουλεύει με [hidden] (όπως το HTML/JS σου)
 ================================ */
 .modal-overlay{
   position:fixed;
   inset:0;
-  display:none;
+  display:grid;
   place-items:center;
   background:rgba(0,0,0,0.55);
   z-index:3000;
   padding:16px;
 }
-
-.modal-overlay.is-open{
-  display:grid;
+.modal-overlay[hidden]{
+  display:none;
 }
 
 .modal{
@@ -308,10 +308,26 @@ body{
 
 /* ===============================
    MOBILE
+   ✅ FIX: dropdown nav που ανοίγει σωστά στο κινητό
 ================================ */
 @media (max-width:860px){
   .hamburger{display:block;}
-  .nav{display:none;}
+
+  /* Αντί για display:block μέσα στο flex header,
+     το κάνουμε dropdown απόλυτο κάτω από το header-inner */
+  .nav{
+    display:none;
+    position:absolute;
+    top: calc(100% + 10px);
+    left: 16px;
+    right: 16px;
+    background: rgba(255,255,255,0.98);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.14);
+    padding: 10px;
+    z-index: 1200;
+  }
   .nav.active{display:block;}
 
   /* ✅ Fix: tabs κάθετα στο mobile */
@@ -431,12 +447,14 @@ body{
   outline-offset: 4px;
   border-radius: 18px;
 }
+
 html, body{
   overflow-x: hidden;
 }
 .header, .header-inner, .nav, .hero, .page, .home-banner{
   max-width: 100%;
 }
+
 /* Μόνο στο mobile: το ESPA logo να μην σπρώχνει το hamburger έξω */
 @media (max-width: 860px){
   .home .brand-logo{
@@ -462,6 +480,7 @@ html, body{
     gap: 10px;
   }
 }
+
 /* ===== Home page centering fixes ===== */
 
 /* Κεντράρισμα hero container */
@@ -490,6 +509,7 @@ html, body{
   margin-right: auto;
   text-align: center;
 }
+
 /* ===============================
    CLINIC PAGE (text + gallery)
 ================================ */
@@ -552,6 +572,7 @@ html, body{
     height: 210px;
   }
 }
+
 /* ===============================
    CLINIC PAGE (text + slideshow)
 ================================ */
@@ -656,6 +677,7 @@ html, body{
     font-size: 22px;
   }
 }
+
 /* ===============================
    CLINIC PAGE (text + gallery grid)
 ================================ */
@@ -777,6 +799,7 @@ html, body{
     font-size: 22px;
   }
 }
+
 /* ===============================
    SERVICES PAGE
 ================================ */
@@ -835,6 +858,7 @@ html, body{
     grid-template-columns: 1fr;
   }
 }
+
 /* ===============================
    SERVICES – FINAL POLISH (WCAG-safe)
 ================================ */
@@ -908,6 +932,7 @@ html, body{
     padding: 16px;
   }
 }
+
 /* ===============================
    CONTACT – 3 COLUMN LAYOUT (WCAG-safe)
 ================================ */
@@ -1036,6 +1061,7 @@ html, body{
     grid-template-columns: 1fr;
   }
 }
+
 /* ===============================
    LEGAL PAGES + COOKIE BANNER (WCAG-friendly)
 ================================ */
@@ -1179,6 +1205,7 @@ html, body{
 @media (max-width: 520px){
   .cookie-row{ flex-direction: column; align-items:flex-start; }
 }
+
 /* Social links (WCAG-friendly) */
 .social-list{
   list-style: none;
@@ -1230,6 +1257,7 @@ html, body{
   outline: 3px solid rgba(143,122,165,0.55);
   outline-offset: 2px;
 }
+
 @media (max-width:860px){
   .bio-photo img{
     width: 100%;
@@ -1240,6 +1268,7 @@ html, body{
     word-break: break-word;
   }
 }
+
 /* Ensure ESPA logo is clickable */
 .espa-trigger{
   pointer-events: auto;
@@ -1253,5 +1282,3 @@ html, body{
   position: relative;
   z-index: 10;
 }
-
-

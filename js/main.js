@@ -17,42 +17,61 @@ if (hamburger && nav) {
   });
 }
 
-// ESPA modal (accessible, robust)
-const espaTrigger = document.querySelector(".espa-trigger");
-const espaModal = document.getElementById("espa-modal");
+// ESPA modal (delegated + accessible)
+(function(){
+  const modalId = "espa-modal";
 
-function openEspaModal(){
-  if (!espaModal) return;
-  espaModal.hidden = false;
-  document.body.style.overflow = "hidden";
+  function openModal(modal){
+    if (!modal) return;
+    modal.hidden = false;
+    document.body.style.overflow = "hidden";
+    const closeBtn = modal.querySelector(".modal-close");
+    if (closeBtn) closeBtn.focus();
+  }
 
-  const closeBtn = espaModal.querySelector(".modal-close");
-  if (closeBtn) closeBtn.focus();
-}
+  function closeModal(modal){
+    if (!modal) return;
+    modal.hidden = true;
+    document.body.style.overflow = "";
+    const trigger = document.querySelector(".espa-trigger");
+    if (trigger) trigger.focus();
+  }
 
-function closeEspaModal(){
-  if (!espaModal) return;
-  espaModal.hidden = true;
-  document.body.style.overflow = "";
-  if (espaTrigger) espaTrigger.focus();
-}
+  // Delegated click handler (works even if elements change / load later)
+  document.addEventListener("click", (e) => {
+    const trigger = e.target.closest(".espa-trigger");
+    const modal = document.getElementById(modalId);
 
-if (espaTrigger && espaModal) {
-  espaTrigger.addEventListener("click", openEspaModal);
+    if (trigger) {
+      e.preventDefault();
+      openModal(modal);
+      return;
+    }
 
-  const closeBtn = espaModal.querySelector(".modal-close");
-  if (closeBtn) closeBtn.addEventListener("click", closeEspaModal);
+    if (!modal || modal.hidden) return;
 
-  // click outside modal to close
-  espaModal.addEventListener("click", (e) => {
-    if (e.target === espaModal) closeEspaModal();
+    // Close button
+    if (e.target.closest(".modal-close")) {
+      e.preventDefault();
+      closeModal(modal);
+      return;
+    }
+
+    // Click outside modal content (overlay)
+    if (e.target === modal) {
+      closeModal(modal);
+    }
   });
 
   // ESC to close
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && !espaModal.hidden) closeEspaModal();
+    const modal = document.getElementById(modalId);
+    if (e.key === "Escape" && modal && !modal.hidden) {
+      closeModal(modal);
+    }
   });
-}
+})();
+
 
 
 /* ===== Gallery groups for Clinic popup slideshow ===== */
@@ -432,4 +451,5 @@ function buildCookieUI(){
     // If you add analytics later, tell me and I'll wire it cleanly.
   }
 })();
+
 

@@ -79,26 +79,27 @@ if (hamburger && nav) {
 ================================ */
 const GALLERIES = {
   waiting: Array.from({ length: 9 }, (_, i) => ({
-    src: `assets/images/waiting${i + 1}.jpg`,
+    src: `assets/images/thumbs/waiting${i + 1}.webp`,
     alt: `Χώρος αναμονής ιατρείου (${i + 1})`,
   })),
   office: Array.from({ length: 4 }, (_, i) => ({
-    src: `assets/images/office${i + 1}.jpg`,
+    src: `assets/images/thumbs/office${i + 1}.webp`,
     alt: `Χώρος γραφείου ιατρείου (${i + 1})`,
   })),
   exam: Array.from({ length: 3 }, (_, i) => ({
-    src: `assets/images/exam${i + 1}.jpg`,
+    src: `assets/images/thumbs/exam${i + 1}.webp`,
     alt: `Εξεταστήριο ιατρείου (${i + 1})`,
   })),
   bathroom: Array.from({ length: 2 }, (_, i) => ({
-    src: `assets/images/other${i + 1}.jpg`,
+    src: `assets/images/thumbs/other${i + 1}.webp`,
     alt: `Μπάνιο ιατρείου (${i + 1})`,
   })),
   obgyn: Array.from({ length: 4 }, (_, i) => ({
-    src: `assets/images/obgyn${i + 1}.jpg`,
+    src: `assets/images/thumbs/obgyn${i + 1}.webp`,
     alt: `Η ιατρός στο ιατρείο (${i + 1})`,
   })),
 };
+
 
 /* ===============================
    Popup slideshow modal (WCAG-friendly)
@@ -466,3 +467,4 @@ function buildCookieUI() {
     applyPrefs(prefs);
   }
 })();
+

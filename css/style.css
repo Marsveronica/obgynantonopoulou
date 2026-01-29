@@ -1241,3 +1241,17 @@ html, body{
     word-break: break-word;
   }
 }
+/* Ensure ESPA logo is clickable */
+.espa-trigger{
+  pointer-events: auto;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.header-inner{
+  position: relative;
+  z-index: 10;
+}
+

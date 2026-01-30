@@ -1351,25 +1351,30 @@ html, body{
   outline-offset: 2px;
 }
 /* ===============================
-   WCAG FIX – Services note link contrast
+   WCAG FIX – Services page link contrast
 ================================ */
+
+/* ειδικά για το services note */
 .services-note a{
-  color: #2f2a2a;                 /* υψηλό contrast */
+  color: #2f2a2a;              /* ίδιο με body text – WCAG safe */
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
+/* hover / focus */
 .services-note a:hover,
 .services-note a:focus{
   color: #1f1b1b;
   text-decoration-thickness: 2px;
 }
 
+/* keyboard accessibility */
 .services-note a:focus-visible{
   outline: 3px solid rgba(143,122,165,0.55);
   outline-offset: 2px;
 }
+
 
 
 

@@ -1311,4 +1311,44 @@ html, body{
   position: relative;
   z-index: 10;
 }
+/* ===============================
+   WCAG: Footer legal links contrast fix
+   (Privacy/Cookies/Settings)
+================================ */
+.footer .footer-legal{
+  margin-top: 10px;
+}
+
+.footer .footer-legal a,
+.footer .footer-legal button.cookie-settings-link{
+  color: #2f2a2a;                 /* ίδιο με --text (υψηλό contrast) */
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+}
+
+/* Button: κράτα το “κουμπί” καθαρό αλλά με σωστό contrast */
+.footer .footer-legal button.cookie-settings-link{
+  background: transparent;
+  border: 1px solid rgba(47,42,42,0.25);
+  border-radius: 12px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.footer .footer-legal a:hover,
+.footer .footer-legal a:focus,
+.footer .footer-legal button.cookie-settings-link:hover,
+.footer .footer-legal button.cookie-settings-link:focus{
+  color: #1f1b1b;                 /* λίγο πιο σκούρο στο hover/focus */
+  text-decoration-thickness: 2px;
+}
+
+/* focus ring όπως έχεις ήδη γενικά */
+.footer .footer-legal a:focus-visible,
+.footer .footer-legal button.cookie-settings-link:focus-visible{
+  outline: 3px solid rgba(143,122,165,0.55);
+  outline-offset: 2px;
+}
+
 

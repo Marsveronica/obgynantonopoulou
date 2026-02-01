@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.obgynantonpoulou.gr/sitemap.xml
+Sitemap: https://www.obgynantonopoulou.gr/sitemap.xml
+

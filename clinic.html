@@ -4,28 +4,78 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Ιατρείο στη Βέροια | Εξοπλισμός & Χώροι</title>
+  <!-- ✅ Improved title: includes full specialty -->
+  <title>Ιατρείο στη Βέροια | Μαιευτήρας – Χειρουργός Γυναικολόγος | Εξοπλισμός & Χώροι</title>
   <link rel="icon" href="assets/images/favicon.ico">
-  <meta name="description" content="Σύγχρονο γυναικολογικό ιατρείο στη Βέροια με υπερηχογράφο GE Voluson Signature 18 BT25 και ηλεκτρονικό κολποσκόπιο. Φωτογραφίες χώρων και εξοπλισμού." />
 
-  <link rel="canonical" href="https://www.obgynantonpoulou.gr/clinic.html" />
+  <meta name="description" content="Σύγχρονο γυναικολογικό ιατρείο στη Βέροια από Μαιευτήρα – Χειρουργό Γυναικολόγο. Υπερηχογράφος GE Voluson Signature 18 BT25, ηλεκτρονικό κολποσκόπιο και φωτογραφίες χώρων & εξοπλισμού." />
+
+  <!-- ✅ FIX: Correct canonical domain -->
+  <link rel="canonical" href="https://www.obgynantonopoulou.gr/clinic.html" />
 
   <!-- Open Graph -->
   <meta property="og:locale" content="el_GR" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Ιατρείο στη Βέροια | Εξοπλισμός & Χώροι" />
-  <meta property="og:description" content="Σύγχρονο γυναικολογικό ιατρείο στη Βέροια με υπερηχογράφο GE Voluson Signature 18 BT25 και ηλεκτρονικό κολποσκόπιο. Φωτογραφίες χώρων και εξοπλισμού." />
-  <meta property="og:url" content="https://www.obgynantonpoulou.gr/clinic.html" />
+  <meta property="og:title" content="Ιατρείο στη Βέροια | Μαιευτήρας – Χειρουργός Γυναικολόγος | Εξοπλισμός & Χώροι" />
+  <meta property="og:description" content="Σύγχρονο γυναικολογικό ιατρείο στη Βέροια από Μαιευτήρα – Χειρουργό Γυναικολόγο. Φωτογραφίες χώρων και εξοπλισμού." />
+  <!-- ✅ FIX: Correct domain -->
+  <meta property="og:url" content="https://www.obgynantonopoulou.gr/clinic.html" />
   <meta property="og:site_name" content="Γυναικολογικό Ιατρείο Αντωνοπούλου" />
-  <meta property="og:image" content="https://www.obgynantonpoulou.gr/assets/images/og-cover.jpg" />
+  <!-- ✅ FIX: Correct domain -->
+  <meta property="og:image" content="https://www.obgynantonopoulou.gr/assets/images/og-cover.jpg" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Ιατρείο στη Βέροια | Εξοπλισμός & Χώροι" />
-  <meta name="twitter:description" content="Σύγχρονο γυναικολογικό ιατρείο στη Βέροια με υπερηχογράφο GE Voluson Signature 18 BT25 και ηλεκτρονικό κολποσκόπιο. Φωτογραφίες χώρων και εξοπλισμού." />
-  <meta name="twitter:image" content="https://www.obgynantonpoulou.gr/assets/images/og-cover.jpg" />
+  <meta name="twitter:title" content="Ιατρείο στη Βέροια | Μαιευτήρας – Χειρουργός Γυναικολόγος" />
+  <meta name="twitter:description" content="Σύγχρονο γυναικολογικό ιατρείο στη Βέροια. Εξοπλισμός και χώροι." />
+  <!-- ✅ FIX: Correct domain -->
+  <meta name="twitter:image" content="https://www.obgynantonopoulou.gr/assets/images/og-cover.jpg" />
 
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- ✅ Structured Data for this page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.obgynantonopoulou.gr/clinic.html#webpage",
+        "url": "https://www.obgynantonopoulou.gr/clinic.html",
+        "name": "Ιατρείο στη Βέροια | Μαιευτήρας – Χειρουργός Γυναικολόγος | Εξοπλισμός & Χώροι",
+        "inLanguage": "el",
+        "isPartOf": { "@id": "https://www.obgynantonopoulou.gr/#website" },
+        "about": [
+          { "@id": "https://www.obgynantonopoulou.gr/#physician" },
+          { "@id": "https://www.obgynantonopoulou.gr/#clinic" }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.obgynantonopoulou.gr/#website",
+        "url": "https://www.obgynantonopoulou.gr/",
+        "name": "Γυναικολογικό Ιατρείο Αντωνοπούλου",
+        "inLanguage": "el"
+      },
+      {
+        "@type": "Physician",
+        "@id": "https://www.obgynantonopoulou.gr/#physician",
+        "name": "Δρ Κορίνα-Ευθυμία Αντωνοπούλου",
+        "jobTitle": "Μαιευτήρας – Χειρουργός Γυναικολόγος",
+        "medicalSpecialty": ["Obstetrics", "Gynecology"],
+        "worksFor": { "@id": "https://www.obgynantonopoulou.gr/#clinic" },
+        "url": "https://www.obgynantonopoulou.gr/"
+      },
+      {
+        "@type": "MedicalBusiness",
+        "@id": "https://www.obgynantonopoulou.gr/#clinic",
+        "name": "Γυναικολογικό Ιατρείο Αντωνοπούλου Κορίνα-Ευθυμία",
+        "url": "https://www.obgynantonopoulou.gr/",
+        "medicalSpecialty": "Obstetrics and Gynecology"
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -63,6 +113,9 @@
         <h1 class="hero-title">
           <span class="hero-title-text">Ιατρείο</span>
         </h1>
+
+        <!-- ✅ Visible specialty line -->
+        <p class="hero-subtitle">Μαιευτήρας – Χειρουργός Γυναικολόγος στη Βέροια</p>
       </header>
 
       <article class="clinic-text" aria-label="Περιγραφή ιατρείου και εξοπλισμού">
@@ -203,4 +256,3 @@
   <script src="js/main.js" defer></script>
 </body>
 </html>
-

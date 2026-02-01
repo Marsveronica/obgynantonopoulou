@@ -4,34 +4,72 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Βιογραφικό | Δρ Κορίνα-Ευθυμία Αντωνοπούλου</title>
+  <!-- ✅ Improved title: includes full specialty -->
+  <title>Βιογραφικό | Μαιευτήρας – Χειρουργός Γυναικολόγος στη Βέροια | Δρ Κορίνα-Ευθυμία Αντωνοπούλου</title>
   <link rel="icon" href="assets/images/favicon.ico">
 
   <meta name="description" content="Εκπαίδευση, εμπειρία και εξειδίκευση της Δρ Κορίνας-Ευθυμίας Αντωνοπούλου, Μαιευτήρα–Χειρουργού Γυναικολόγου στη Βέροια." />
 
-  <link rel="canonical" href="https://www.obgynantonpoulou.gr/bio.html" />
+  <!-- ✅ FIX: Correct canonical domain -->
+  <link rel="canonical" href="https://www.obgynantonopoulou.gr/bio.html" />
 
   <!-- Open Graph -->
   <meta property="og:locale" content="el_GR" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Βιογραφικό | Δρ Κορίνα-Ευθυμία Αντωνοπούλου" />
+  <meta property="og:title" content="Βιογραφικό | Μαιευτήρας – Χειρουργός Γυναικολόγος | Δρ Κορίνα-Ευθυμία Αντωνοπούλου" />
   <meta property="og:description" content="Εκπαίδευση, εμπειρία και εξειδίκευση της Δρ Κορίνας-Ευθυμίας Αντωνοπούλου, Μαιευτήρα–Χειρουργού Γυναικολόγου στη Βέροια." />
-  <meta property="og:url" content="https://www.obgynantonpoulou.gr/bio.html" />
+  <!-- ✅ FIX: Correct domain -->
+  <meta property="og:url" content="https://www.obgynantonopoulou.gr/bio.html" />
   <meta property="og:site_name" content="Γυναικολογικό Ιατρείο Αντωνοπούλου" />
-  <meta property="og:image" content="https://www.obgynantonpoulou.gr/assets/images/og-cover.jpg" />
+  <!-- ✅ FIX: Correct domain -->
+  <meta property="og:image" content="https://www.obgynantonopoulou.gr/assets/images/og-cover.jpg" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Βιογραφικό | Δρ Κορίνα-Ευθυμία Αντωνοπούλου" />
+  <meta name="twitter:title" content="Βιογραφικό | Μαιευτήρας – Χειρουργός Γυναικολόγος | Δρ Κορίνα-Ευθυμία Αντωνοπούλου" />
   <meta name="twitter:description" content="Εκπαίδευση, εμπειρία και εξειδίκευση της Δρ Κορίνας-Ευθυμίας Αντωνοπούλου, Μαιευτήρα–Χειρουργού Γυναικολόγου στη Βέροια." />
-  <meta name="twitter:image" content="https://www.obgynantonpoulou.gr/assets/images/og-cover.jpg" />
+  <!-- ✅ FIX: Correct domain -->
+  <meta name="twitter:image" content="https://www.obgynantonopoulou.gr/assets/images/og-cover.jpg" />
 
-  <!-- Fonts (ό,τι είχες ήδη) -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- ✅ Structured Data for this page (connects page -> physician) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.obgynantonopoulou.gr/bio.html#webpage",
+        "url": "https://www.obgynantonopoulou.gr/bio.html",
+        "name": "Βιογραφικό | Μαιευτήρας – Χειρουργός Γυναικολόγος στη Βέροια | Δρ Κορίνα-Ευθυμία Αντωνοπούλου",
+        "inLanguage": "el",
+        "isPartOf": { "@id": "https://www.obgynantonopoulou.gr/#website" },
+        "about": { "@id": "https://www.obgynantonopoulou.gr/#physician" }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.obgynantonopoulou.gr/#website",
+        "url": "https://www.obgynantonopoulou.gr/",
+        "name": "Γυναικολογικό Ιατρείο Αντωνοπούλου",
+        "inLanguage": "el"
+      },
+      {
+        "@type": "Physician",
+        "@id": "https://www.obgynantonopoulou.gr/#physician",
+        "name": "Δρ Κορίνα-Ευθυμία Αντωνοπούλου",
+        "jobTitle": "Μαιευτήρας – Χειρουργός Γυναικολόγος",
+        "medicalSpecialty": ["Obstetrics", "Gynecology"],
+        "url": "https://www.obgynantonopoulou.gr/"
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body class="bio-page">
@@ -66,107 +104,108 @@
 
   <!-- Main -->
   <main id="main">
-  <section class="page">
-  <header class="page-header">
-    <h1 class="hero-title">
-      <span class="hero-title-text">Βιογραφικό</span>
-    </h1>
-  </header>
+    <section class="page">
+      <header class="page-header">
+        <h1 class="hero-title">
+          <span class="hero-title-text">Βιογραφικό</span>
+        </h1>
 
-  <div class="bio-layout">
-    <div class="bio-photo">
-      <button class="lightbox-trigger" type="button">
-        <img src="assets/images/doctor1.jpg"
-             alt="Δρ Κορίνα-Ευθυμία Αντωνοπούλου – Ιατρείο Βέροια">
-      </button>
+        <!-- ✅ Visible specialty line -->
+        <p class="hero-subtitle">Μαιευτήρας – Χειρουργός Γυναικολόγος στη Βέροια</p>
+      </header>
 
-      <button class="lightbox-trigger" type="button">
-        <img src="assets/images/doctor2.jpg"
-             alt="Δρ Κορίνα-Ευθυμία Αντωνοπούλου – Επαγγελματικό πορτρέτο">
-      </button>
+      <div class="bio-layout">
+        <div class="bio-photo">
+          <button class="lightbox-trigger" type="button">
+            <img src="assets/images/doctor1.jpg"
+                 alt="Δρ Κορίνα-Ευθυμία Αντωνοπούλου – Ιατρείο Βέροια">
+          </button>
 
-      <button class="lightbox-trigger" type="button">
-        <img src="assets/images/doctor3.jpg"
-             alt="Δρ Κορίνα-Ευθυμία Αντωνοπούλου – Ιατρική πράξη">
-      </button>
-    </div>
+          <button class="lightbox-trigger" type="button">
+            <img src="assets/images/doctor2.jpg"
+                 alt="Δρ Κορίνα-Ευθυμία Αντωνοπούλου – Επαγγελματικό πορτρέτο">
+          </button>
 
- <div class="bio-text">
+          <button class="lightbox-trigger" type="button">
+            <img src="assets/images/doctor3.jpg"
+                 alt="Δρ Κορίνα-Ευθυμία Αντωνοπούλου – Ιατρική πράξη">
+          </button>
+        </div>
 
-  <p>
-    <strong>Η Δρ Κορίνα-Ευθυμία Αντωνοπούλου, M.D., M.Sc.</strong>, είναι
-    Μαιευτήρας – Χειρουργός Γυναικολόγος με εκτενή κλινική εμπειρία
-    στην Ελλάδα και το εξωτερικό.
-  </p>
+        <div class="bio-text">
 
-  <p>
-    Είναι απόφοιτη της Ιατρικής Σχολής του Πανεπιστημίου <strong>Semmelweis</strong>
-    της Βουδαπέστης (2007–2013). Την ειδικότητά της στη
-    Μαιευτική και Γυναικολογία πραγματοποίησε στο
-    Γενικό Νοσοκομείο Ημαθίας – Μονάδα Βέροιας (2015–2018)
-    και στο Γενικό Νοσοκομείο Θεσσαλονίκης «Ιπποκράτειο»
-    (2018–2019), ενώ προηγήθηκε εκπαίδευση στη
-    Γενική Χειρουργική στο Γενικό Νοσοκομείο Ημαθίας – Μονάδα Βέροιας
-    (2013–2014).
-  </p>
+          <p>
+            <strong>Η Δρ Κορίνα-Ευθυμία Αντωνοπούλου, M.D., M.Sc.</strong>, είναι
+            Μαιευτήρας – Χειρουργός Γυναικολόγος με εκτενή κλινική εμπειρία
+            στην Ελλάδα και το εξωτερικό.
+          </p>
 
-  <p>
-    Από το <strong>2022 έως το 2025</strong> εργάστηκε ως
-    Επιμελήτρια Μαιευτικής – Γυναικολογίας στο
-    <strong>Πανεπιστημιακό Νοσοκομείο CHU UCL Namur – Site Dinant</strong> στο
-    Βέλγιο. Το <strong>2022</strong> συνεργάστηκε επίσης με το
-    <strong>Γενικό Νοσοκομείο Ημαθίας – Μονάδα Βέροιας</strong> ως
-   ιδιώτης μαιευτήρας–χειρουργός γυναικολόγος.
-  </p>
+          <p>
+            Είναι απόφοιτη της Ιατρικής Σχολής του Πανεπιστημίου <strong>Semmelweis</strong>
+            της Βουδαπέστης (2007–2013). Την ειδικότητά της στη
+            Μαιευτική και Γυναικολογία πραγματοποίησε στο
+            Γενικό Νοσοκομείο Ημαθίας – Μονάδα Βέροιας (2015–2018)
+            και στο Γενικό Νοσοκομείο Θεσσαλονίκης «Ιπποκράτειο»
+            (2018–2019), ενώ προηγήθηκε εκπαίδευση στη
+            Γενική Χειρουργική στο Γενικό Νοσοκομείο Ημαθίας – Μονάδα Βέροιας
+            (2013–2014).
+          </p>
 
-  <p>
-    Παράλληλα, από το <strong>2020 έως σήμερα</strong>, δραστηριοποιείται στον τομέα
-    της ιατρικής εκπαίδευσης ως <strong>εξωτερική συνεργάτιδα</strong> των εταιρειών
-    <strong>RoshReview</strong> και <strong>Blueprint Test Prep</strong> στις
-    <strong>Ηνωμένες Πολιτείες Αμερικής</strong>, συμμετέχοντας στη
-    συγγραφή, επιστημονική επιμέλεια και αξιολόγηση εκπαιδευτικού
-    υλικού στον τομέα της Μαιευτικής και Γυναικολογίας.
-  </p>
+          <p>
+            Από το <strong>2022 έως το 2025</strong> εργάστηκε ως
+            Επιμελήτρια Μαιευτικής – Γυναικολογίας στο
+            <strong>Πανεπιστημιακό Νοσοκομείο CHU UCL Namur – Site Dinant</strong> στο
+            Βέλγιο. Το <strong>2022</strong> συνεργάστηκε επίσης με το
+            <strong>Γενικό Νοσοκομείο Ημαθίας – Μονάδα Βέροιας</strong> ως
+            ιδιώτης μαιευτήρας–χειρουργός γυναικολόγος.
+          </p>
 
-  <p>
-    Έχει ολοκληρώσει <strong>Μεταπτυχιακό</strong> Πρόγραμμα Σπουδών (M.Sc.) στην
-    <strong>Εμβρυομητρική Ιατρική</strong> στο
-    Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης
-    (2020–2022). Επιπλέον, έχει παρακολουθήσει
-    <strong>Μετεκπαιδευτικό Πρόγραμμα Κατάρτισης</strong>  στη
-    <strong>Μητρική Ιατρική</strong> στο
-    <strong>Hospital Clínic</strong> της Βαρκελώνης (2025) και έχει αποκτήσει
-    <strong>Δίπλωμα Εκπαίδευσης</strong> στην
-    <strong>«Απεικόνιση στην Εμβρυομητρική Ιατρική»</strong> από το
-    <strong>Centro Formación Continua Medicina Materno Fetal</strong> της
-   Βαρκελώνης (2024-2025).
-  </p>
+          <p>
+            Παράλληλα, από το <strong>2020 έως σήμερα</strong>, δραστηριοποιείται στον τομέα
+            της ιατρικής εκπαίδευσης ως <strong>εξωτερική συνεργάτιδα</strong> των εταιρειών
+            <strong>RoshReview</strong> και <strong>Blueprint Test Prep</strong> στις
+            <strong>Ηνωμένες Πολιτείες Αμερικής</strong>, συμμετέχοντας στη
+            συγγραφή, επιστημονική επιμέλεια και αξιολόγηση εκπαιδευτικού
+            υλικού στον τομέα της Μαιευτικής και Γυναικολογίας.
+          </p>
 
-  <p>
-    Διαθέτει πιστοποιήσεις προηγμένης υποστήριξης ζωής στη
-    Μαιευτική και Γυναικολογία (<strong>ALSO, ALSG, BLSO</strong>) και είναι
-    πιστοποιημένη εκπαιδεύτρια. Παράλληλα,συμμετέχει συστηματικά 
-    σε επιστημονικά συνέδρια και προγράμματα
-    συνεχιζόμενης εκπαίδευσης, δια ζώσης και διαδικτυακά.
-  </p>
+          <p>
+            Έχει ολοκληρώσει <strong>Μεταπτυχιακό</strong> Πρόγραμμα Σπουδών (M.Sc.) στην
+            <strong>Εμβρυομητρική Ιατρική</strong> στο
+            Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης
+            (2020–2022). Επιπλέον, έχει παρακολουθήσει
+            <strong>Μετεκπαιδευτικό Πρόγραμμα Κατάρτισης</strong> στη
+            <strong>Μητρική Ιατρική</strong> στο
+            <strong>Hospital Clínic</strong> της Βαρκελώνης (2025) και έχει αποκτήσει
+            <strong>Δίπλωμα Εκπαίδευσης</strong> στην
+            <strong>«Απεικόνιση στην Εμβρυομητρική Ιατρική»</strong> από το
+            <strong>Centro Formación Continua Medicina Materno Fetal</strong> της
+            Βαρκελώνης (2024-2025).
+          </p>
 
-  <p>
-    Μιλά <strong>επτά γλώσσες</strong>, γεγονός που διευκολύνει την επικοινωνία με
-    ασθενείς διαφορετικών πολιτισμικών υποβάθρων.
-  </p>
+          <p>
+            Διαθέτει πιστοποιήσεις προηγμένης υποστήριξης ζωής στη
+            Μαιευτική και Γυναικολογία (<strong>ALSO, ALSG, BLSO</strong>) και είναι
+            πιστοποιημένη εκπαιδεύτρια. Παράλληλα, συμμετέχει συστηματικά
+            σε επιστημονικά συνέδρια και προγράμματα
+            συνεχιζόμενης εκπαίδευσης, δια ζώσης και διαδικτυακά.
+          </p>
 
-  <p>
-    Σήμερα διατηρεί <strong>ιδιωτικό ιατρείο στη Βέροια</strong>, παρέχοντας
-   ολοκληρωμένες και εξατομικευμένες υπηρεσίες μαιευτικής και γυναικολογίας,
-    με έμφαση στη σύγχρονη ιατρική πρακτική και την
-    επιστημονική τεκμηρίωση.
-  </p>
+          <p>
+            Μιλά <strong>επτά γλώσσες</strong>, γεγονός που διευκολύνει την επικοινωνία με
+            ασθενείς διαφορετικών πολιτισμικών υποβάθρων.
+          </p>
 
-</div>
+          <p>
+            Σήμερα διατηρεί <strong>ιδιωτικό ιατρείο στη Βέροια</strong>, παρέχοντας
+            ολοκληρωμένες και εξατομικευμένες υπηρεσίες μαιευτικής και γυναικολογίας,
+            με έμφαση στη σύγχρονη ιατρική πρακτική και την
+            επιστημονική τεκμηρίωση.
+          </p>
 
-  </div>
-</section>
-
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
@@ -174,9 +213,6 @@
     <p>© 2026 Δρ Κορίνα-Ευθυμία Αντωνοπούλου — Βέροια</p>
   </footer>
 
- <script src="js/main.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
-
-
-

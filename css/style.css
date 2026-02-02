@@ -1374,10 +1374,12 @@ html, body{
   outline: 3px solid rgba(143,122,165,0.55);
   outline-offset: 2px;
 }
-/* Spacing before Languages section in Contact page */
-.contact-panel .contact-item[aria-labelledby="languages-title"] {
+/* Spacing before Languages title in Contact page */
+#languages-title {
   margin-top: 2rem;
 }
+
+
 
 
 

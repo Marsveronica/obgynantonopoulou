@@ -86,7 +86,7 @@
         },
         "areaServed": { "@type": "City", "name": "Βέροια" },
         "geo": { "@type": "GeoCoordinates", "latitude": 40.5270182, "longitude": 22.2035727 },
-        "hasMap": "https://www.google.com/maps/place/%CE%9A%CE%BF%CF%81%CE%AF%CE%BD%CE%B1+-+%CE%95%CF%85%CE%B8%CF%85%CE%BC%CE%AF%CE%B1+%CE%91%CE%BD%CF%84%CF%89%CE%BD%CE%BF%CF%80%CE%BF%CF%8D%CE%BB%CE%BF%CF%85+%CE%A7%CE%B5%CE%B9%CF%81%CE%BF%CF%85%CF%81%CE%B3%CF%8C%CF%82+%CE%93%CF%85%CE%BD%CE%B1%CE%B9%CE%BA%CE%BF%CE%BB%CF%8C%CE%B3%CE%BF%CF%82-+%CE%9C%CE%B1%CE%B9%CE%B5%CF%85%CF%84%CE%AE%CF%81%CE%B1%CF%82/@40.526997,22.2035626,38m/data=!3m1!1e3!4m6!3m5!1s0x1357930033d64b1d:0x828482d424f9ab5e!8m2!3d40.5270182!4d22.2035727!16s%2Fg%2F11ysgvmbc3",
+        "hasMap": "https://www.google.com/maps/place/%CE%9A%CE%BF%CF%81%CE%AF%CE%BD%CE%B1+-+%CE%95%CF%85%CE%B8%CF%85%CE%BC%CE%AF%CE%B1+%CE%91%CE%BD%CF%84%CF%89%CE%BD%CE%BF%CF%80%CE%BF%CF%8D%CE%BB%CE%BF%CF%85+%CE%A7%CE%B5%CE%B9%CF%81%CE%BF%CF%85%CF%81%CE%B3%CF%8C%CF%82+%CE%93%CF%85%CE%BD%CE%B1%CE%B9%CE%BA%CE%BF%CE%BB%CF%8C%CF%82-+%CE%9C%CE%B1%CE%B9%CE%B5%CF%85%CF%84%CE%AE%CF%81%CE%B1%CF%82/@40.526997,22.2035626,38m/data=!3m1!1e3!4m6!3m5!1s0x1357930033d64b1d:0x828482d424f9ab5e!8m2!3d40.5270182!4d22.2035727!16s%2Fg%2F11ysgvmbc3",
         "sameAs": [
           "https://share.google/FHNQ8UwZIRNt2qtts",
           "https://www.facebook.com/share/17szvFkfQy/",
@@ -256,7 +256,7 @@
           <div class="hours-box" role="group" aria-label="Ωράριο ιατρείου">
             <p class="hours-main">
               <strong>Δευτέρα – Παρασκευή:</strong><br>
-              09:00 – 21:00 <span class="hours-muted">(κατόπιν ραντεβού)</span>
+              09:00 – 21:00 <span class="hours-muted"></span>
             </p>
 
             <p class="hours-main">
@@ -265,8 +265,21 @@
             </p>
 
             <p class="hours-foot">
-              Συνιστάται τηλεφωνική επικοινωνία για επιβεβαίωση διαθεσιμότητας.
+              Αποκλειστικά κατόπιν ραντεβού
             </p>
+          </div>
+
+          <!-- ✅ NEW: Languages (WCAG-friendly) -->
+          <div class="contact-item" aria-labelledby="languages-title">
+            <h3 id="languages-title">Γλώσσες επικοινωνίας</h3>
+            <ul>
+              <li>Ελληνικά</li>
+              <li lang="en">English <span>(full consultation)</span></li>
+              <li lang="es">Español <span>(consulta completa)</span></li>
+              <li lang="fr">Français <span>(consultation complète)</span></li>
+              <li lang="ru">Русский <span>(медицинский анамнез и базовое медицинское общение)</span></li>
+              <li lang="hu">Magyar <span>(orvosi anamnézis és alapvető orvosi kommunikáció)</span></li>
+            </ul>
           </div>
         </section>
 
